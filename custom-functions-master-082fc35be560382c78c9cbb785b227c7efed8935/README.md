@@ -64,3 +64,45 @@ args:
 make_me_md_table_files(path)
 ```
 ```make_me_md_table_files``` prints all objects files in ```path``` in a .md table format with two columns: File, Description. Helps make Readme.md's easier to make.
+
+## ROC Curve Analysis
+The following three functions were built to make ROC Curve analysis easier and more visual.
+```
+calculate_roc(df, cost_of_fp, cost_of_fn)
+```
+**About:**
+``` calculate_roc()``` creates a data frame with variables that are needed for ROC curve analysis:  
+
+args:
+* df: dataframe
+* cost_of_fp: integer to penalize false positves 
+* cost_of_fn: integer to penalize false negatives 
+
+This function shines because it automatically calculates the optimal prediction threshold for binary classification. The visualizations help see what observations are type I or II error too.
+
+``` plot_prediction_type_distribution(df, threshold, show_plot = T) ```
+
+**About:** 
+* visualizes the Type I and II errors. 
+* df must have vars named **prediction** and **actual**, where **prediction** is the probability score before it's rounded up or down to match the values of **actual**.
+
+
+```plot_roc <- function(df, fpc = 1, fnc = 2)```
+
+**About:**
+
+```Plot_roc()``` plots 3 graphs arranged in one plot grid (via cowplot) to help illustrate how your model perfomed at binary classifcation.  It visualizes 
+
+* cost 
+* optimal threshold curve
+* type I and II errors
+
+**args:** 
+* df: data frame with vars named: threshold, tpr, fpr, cost. Created from ``` calculate_roc()```
+* fpc: cost to penalize false positives
+* fnc: cost to penalize false negatives
+
+![alt text](https://gitlab.directs.com/Data_Science_Projects/Customer_Insights/custom-functions/blob/master/ROC%20Plots%20(That%20rock).jpg)
+
+*Modified from joyofdata @: https://github.com/joyofdata/joyofdata-articles/blob/master/roc-auc/plot_roc.R*
+
