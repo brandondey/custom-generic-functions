@@ -102,7 +102,7 @@ This function shines because it automatically calculates the optimal prediction 
 * fpc: cost to penalize false positives
 * fnc: cost to penalize false negatives
 
-![alt text](https://gitlab.directs.com/Data_Science_Projects/Customer_Insights/custom-functions/blob/master/ROC%20Plots%20(That%20rock).jpg)
+![alt text](https://github.com/brandondey/custom-generic-functions/blob/master/custom-functions-master-082fc35be560382c78c9cbb785b227c7efed8935/ROC%20Plots%20(That%20rock).jpg)
 
 *Modified from joyofdata @: https://github.com/joyofdata/joyofdata-articles/blob/master/roc-auc/plot_roc.R*
 
