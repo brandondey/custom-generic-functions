@@ -547,7 +547,7 @@ save(
   rename_var,
   flattenCorrMatrix,
   prettify_logistic_reg,
-  file = '//nike/Common/Information Sciences/Business Analytics/Brandon/R Projects/Functions/Custom_Functions.rds')
+  file = './R Projects/Functions/Custom_Functions.rds')
 
 
 
